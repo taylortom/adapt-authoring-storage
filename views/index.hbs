@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Storage</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+  </head>
+  <body>
+    <div id="app">
+      <content>
+        <p>You are using</p>
+        <p>{{string}} / {{limit}} ({{percent}}%)<p>
+      </content>
+    </div>
+  </body>
+  <style media="screen">
+    #app {
+      margin-top: 10%;
+      width: 100%;
+    }
+    content {
+      font-size: 100px;
+    }
+    @media(max-width:900px) {
+      content {
+        font-size: 60px;
+      }
+    }
+  </style>
+</html>
