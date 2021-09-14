@@ -6,39 +6,35 @@
 	{{else}}
 	{{total.string}} / {{#if limit.raw}}{{limit.string}} ({{total.percent}}%){{else}}∞{{/if}} {{t "app.used"}}
 	</div>
+	<div class="storage-bar">
+		<div class="storage-fill system" style="width:{{system.percent}}%;"></div>
+		<div class="storage-fill cache" style="width:{{cache.percent}}%;"></div>
+		<div class="storage-fill assets" style="width:{{assets.percent}}%;"></div>
+		<div class="storage-fill plugins" style="width:{{plugins.percent}}%;"></div>
+	</div>
 	<div class="storage-breakdown">
-		<div class="storage-bar">
-			<div class="storage-fill core" style="width:{{core.percent}}%;"></div>
-			<div class="storage-fill assets" style="width:{{assets.percent}}%;"></div>
-			<div class="storage-fill cache" style="width:{{cache.percent}}%;"></div>
-			<div class="storage-fill plugins" style="width:{{plugins.percent}}%;"></div>
-		</div>
-		<div class="storage-row core">
-			<div class="storage-text">
-				<div class="name">{{t "app.core"}}</div>
-				<div class="size">{{core.string}}</div>
-			</div>
-			<div class="storage-action"></div>
-		</div>
-		<div class="storage-row assets">
-			<div class="storage-text">
-				<div class="name">{{t "app.assets"}}</div>
-				<div class="size">{{assets.string}}</div>
-			</div>
+		<div class="storage-row system">
+			<div class="name">{{t "app.system"}}</div>
+			<div class="size">{{system.string}}</div>
+			<div class="percentage">({{system.percent}}%)</div>
 			<div class="storage-action"></div>
 		</div>
 		<div class="storage-row cache">
-			<div class="storage-text">
-				<div class="name">{{t "app.cache"}}</div>
-				<div class="size">{{cache.string}}</div>
-			</div>
+			<div class="name">{{t "app.cache"}}</div>
+			<div class="size">{{cache.string}}</div>
+			<div class="percentage">({{cache.percent}}%)</div>
+			<div class="storage-action"></div>
+		</div>
+		<div class="storage-row assets">
+			<div class="name">{{t "app.assets"}}</div>
+			<div class="size">{{assets.string}}</div>
+			<div class="percentage">({{assets.percent}}%)</div>
 			<div class="storage-action"></div>
 		</div>
 		<div class="storage-row plugins">
-			<div class="storage-text">
-				<div class="name">{{t "app.plugins"}}</div>
-				<div class="size">{{plugins.string}}</div>
-			</div>
+			<div class="name">{{t "app.plugins"}}</div>
+			<div class="size">{{plugins.string}}</div>
+			<div class="percentage">({{plugins.percent}}%)</div>
 			<div class="storage-action">
 				<button class="btn tertiary-hollow">{{t "app.manageplugins"}}</button>
 			</div>
