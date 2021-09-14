@@ -1,3 +1,3 @@
-const Storage = require('./lib/module');
+const Storage = require('./lib/StorageModule');
 
 module.exports = Storage;
