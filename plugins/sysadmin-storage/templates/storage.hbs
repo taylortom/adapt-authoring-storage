@@ -1,4 +1,4 @@
-<div class="inner{{#unless limit.raw}} unlimited{{/unless}}">
+<div class="inner{{#unless limit.raw}} unlimited{{/unless}} {{#when total.percent 'gt' 99}}full{{/when}}">
 	<div class="title">{{t "app.storage"}}</div>
 	<div class="description">
 	{{#unless total}}

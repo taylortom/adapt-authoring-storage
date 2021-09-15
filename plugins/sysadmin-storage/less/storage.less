@@ -53,3 +53,19 @@
 .storage-action .btn {
 	min-width: 130px;
 }
+
+/**
+ * Storage 'full' styling
+ */
+.storage .inner.full {
+	color: @alert-color;
+	.storage-fill { 
+		background-color: @alert-color;
+		animation: blink 1.5s infinite;
+	}	
+}
+@keyframes blink {
+	0%   { opacity: 1; }
+	50%  { opacity: 0; }
+	100% { opacity: 1; }
+}
