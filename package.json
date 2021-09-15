@@ -1,26 +1,13 @@
 {
   "name": "adapt-authoring-storage",
   "version": "0.0.1",
-  "description": "An example module to check disk usage",
-  "homepage": "https://github.com/tomgreenfield/adapt-authoring-storage",
+  "description": "A module to check disk usage",
+  "homepage": "https://github.com/cgkineo/adapt-authoring-storage",
   "main": "index.js",
-  "adapt_authoring": {
-    "module": true,
-    "moduleDependencies": [
-      "adapt-authoring-server"
-    ],
-    "documentation": {
-      "enable": true,
-      "includes": {
-        "source": "lib/*",
-        "docs": "docs/*"
-      }
-    }
-  },
   "dependencies": {
   	"bytes": "^3.1.0"
   },
-  "peerDependencies": {
+  "dependencies": {
     "adapt-authoring-api": "git+https://github.com/adapt-security/adapt-authoring-api.git",
     "adapt-authoring-core": "git+https://github.com/adapt-security/adapt-authoring-core.git"
   }
