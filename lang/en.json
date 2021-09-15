@@ -2,7 +2,7 @@
 	"app.storage": "Storage",
 	"app.storageerror": "There was a problem checking your storage usage.",
 	"app.used": "used",
-	"app.core": "Core",
+	"app.system": "System",
 	"app.assets": "Assets",
 	"app.cache": "Cache",
 	"app.plugins": "Plugins",
