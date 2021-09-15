@@ -5,10 +5,7 @@
   "homepage": "https://github.com/cgkineo/adapt-authoring-storage",
   "main": "index.js",
   "dependencies": {
+    "adapt-authoring-core": "git+https://github.com/adapt-security/adapt-authoring-core.git",
   	"bytes": "^3.1.0"
-  },
-  "dependencies": {
-    "adapt-authoring-api": "git+https://github.com/adapt-security/adapt-authoring-api.git",
-    "adapt-authoring-core": "git+https://github.com/adapt-security/adapt-authoring-core.git"
   }
 }
