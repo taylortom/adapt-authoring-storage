@@ -6,5 +6,6 @@
 	"app.assets": "Assets",
 	"app.cache": "Cache",
 	"app.plugins": "Plugins",
+	"app.freespace": "Free space",
 	"app.manageplugins": "Manage plugins"
 }

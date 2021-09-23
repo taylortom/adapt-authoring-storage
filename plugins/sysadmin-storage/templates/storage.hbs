@@ -39,6 +39,12 @@
 				<button class="btn tertiary-hollow">{{t "app.manageplugins"}}</button>
 			</div>
 		</div>
+		<div class="storage-row free">
+			<div class="name">{{t "app.freespace"}}</div>
+			<div class="size">{{free.string}}</div>
+			{{#if limit.raw}}<div class="percentage">({{free.percent}}%)</div>{{/if}}
+			<div class="storage-action"></div>
+		</div>
 	</div>
 	{{/unless}}
 </div>
