@@ -11,24 +11,14 @@ define([
 			"click .plugins button": "onPluginsClick"
 		},
 
-		preRender: function() {
-			$.ajax({
-				url: "api/storage",
-				error: function(jqXHR, textStatus, errorThrown) {
-					Origin.Notify.alert({
-						type: "error",
-						text: Origin.l10n.t("app.storageerror")
-					});
-				},
-				success: function(data, textStatus, jqXHR) {
-					this.model = new Backbone.Model(data);
-					this.render();
-				}.bind(this)
-			});
-		},
-
-		postRender: function() {
-			this.setViewToReady();
+		preRender: async function() {
+			try {
+				this.model = new Backbone.Model(await $.get("api/storage"));
+				this.render();
+				this.setViewToReady();
+			} catch(e) {
+				Origin.Notify.alert({ type: "error", text: Origin.l10n.t("app.storageerror") });
+			}
 		},
 
 		onPluginsClick: function() {
