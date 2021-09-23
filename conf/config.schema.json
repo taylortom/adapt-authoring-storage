@@ -5,7 +5,7 @@
     "storageLimit": {
       "description": "Soft limit on storage size",
       "type": "string",
-      "default": "0.5GB",
+      "default": "3GB",
       "public": true
     }
   }
