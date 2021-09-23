@@ -19,6 +19,12 @@
 			{{#if limit.raw}}<div class="percentage">({{system.percent}}%)</div>{{/if}}
 			<div class="storage-action"></div>
 		</div>
+		<div class="storage-row db">
+			<div class="name">{{t "app.db"}}</div>
+			<div class="size">{{db.string}}</div>
+			{{#if limit.raw}}<div class="percentage">({{db.percent}}%)</div>{{/if}}
+			<div class="storage-action"></div>
+		</div>
 		<div class="storage-row cache">
 			<div class="name">{{t "app.cache"}}</div>
 			<div class="size">{{cache.string}}</div>
@@ -39,12 +45,14 @@
 				<button class="btn tertiary-hollow">{{t "app.manageplugins"}}</button>
 			</div>
 		</div>
-		<div class="storage-row free">
-			<div class="name">{{t "app.freespace"}}</div>
-			<div class="size">{{free.string}}</div>
-			{{#if limit.raw}}<div class="percentage">({{free.percent}}%)</div>{{/if}}
-			<div class="storage-action"></div>
-		</div>
+		{{#if limit.raw}}
+			<div class="storage-row free">
+				<div class="name">{{t "app.freespace"}}</div>
+				<div class="size">{{free.string}}</div>
+				<div class="percentage">({{free.percent}}%)</div>
+				<div class="storage-action"></div>
+			</div>
+		{{/if}}
 	</div>
 	{{/unless}}
 </div>

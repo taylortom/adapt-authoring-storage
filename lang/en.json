@@ -3,6 +3,7 @@
 	"app.storageerror": "There was a problem checking your storage usage.",
 	"app.used": "used",
 	"app.system": "System",
+	"app.db": "Database",
 	"app.assets": "Assets",
 	"app.cache": "Cache",
 	"app.plugins": "Plugins",
